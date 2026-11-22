@@ -57,3 +57,6 @@ footer{padding:28px 0;color:var(--muted);font-size:.85rem;border-top:1px solid v
   header .wrap{height:auto;flex-wrap:wrap;padding-top:10px;padding-bottom:8px}
   nav{width:100%;display:flex;flex-wrap:wrap;gap:4px 14px} nav a{margin-left:0}
 }
+.video{margin:28px auto;max-width:340px;text-align:center}
+.video video{width:100%;border-radius:12px;background:#000;display:block}
+.video figcaption{color:var(--muted);font-size:.85rem;margin-top:8px}
