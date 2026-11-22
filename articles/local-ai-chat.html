@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>データを外に出さないAIチャットを、PC1台で作った | しくみ屋</title>
+<meta name="description" content="ChatGPTのようなAIチャットを、インターネットに送らずに社内のPC1台で動かした記録。必要なPC、つまずいたところ、入れてはいけない情報まで。">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="../">しくみ屋</a>
+  <nav><a href="../#service">できること</a><a href="../#articles">記事</a><a href="../#contact">相談</a></nav>
+</div></header>
+
+<main class="article">
+  <h1>データを外に出さないAIチャットを、PC1台で作った</h1>
+  <div class="meta">2026年11月 ・ AI</div>
+
+  <p>ChatGPTのようなAIは便利ですが、会社で使おうとすると「お客さんの情報を入力していいの？」「毎月の利用料は？」という壁にぶつかります。</p>
+  <p>そこで、<strong>インターネットに会話を送らず、手元のPC1台だけで動くAIチャット</strong>を作りました。ブラウザで開いて、普通のAIチャットと同じように使えます。</p>
+
+  <h2>どんなものか</h2>
+  <ul>
+    <li>見た目と使い方は、ふつうのAIチャットとほぼ同じ</li>
+    <li>会話の中身はPCの外に出ない（準備が終われば、インターネットを切っても動く）</li>
+    <li>月額の利用料はかからない（かかるのはPCの電気代くらい）</li>
+    <li>スマホからも、安全な経路でつないで使える</li>
+    <li>自分の予定（カレンダー）を読んで、「来週の予定は？」に答えられる</li>
+  </ul>
+
+  <h2>必要なもの</h2>
+  <p>特別なサーバーは要りません。今回は、ゲームもできる程度のデスクトップPC1台で動かしています。</p>
+  <div class="box">
+    <ul style="margin:0">
+      <li><strong>グラフィックボード</strong>：メモリ8GBのもの（AIの「頭」をここに載せて動かします。これがあると返事が速い）</li>
+      <li><strong>PC本体のメモリ</strong>：32GBあると安心</li>
+      <li><strong>ソフト</strong>：AIを動かすソフトと、チャット画面のソフト。どちらも無料で使えるもの</li>
+    </ul>
+  </div>
+  <p>返事の速さは、ふつうの質問なら1〜2秒、資料を調べて答える質問でも10秒ほどです。</p>
+
+  <h2>つまずいたところ</h2>
+  <div class="box">
+    <h3 style="margin-top:0">AIの「頭」選びで、賢さも安全性も大きく変わる</h3>
+    <p style="margin-bottom:0">無料で使えるAIの頭（モデル）はたくさんあります。いくつか試したところ、同じ質問でも答えの質がまったく違い、
+      あるモデルは「USBメモリの調子が悪い」という相談に、データが消える操作を気軽に勧めてきました。
+      PCに載る大きさの中で、一番賢く、危ない答えをしないものを選ぶのが最初の大仕事です。</p>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0">「考えすぎ」で返事が20秒以上かかる</h3>
+    <p style="margin-bottom:0">最近のAIは、答える前にじっくり考える機能を持っています。賢くはなりますが、ちょっとした質問でも20秒以上待たされました。
+      ふだんの会話では考える機能を切り、1〜2秒で返事が来るようにしました。</p>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0">資料を読ませたら、全部の質問に「資料にはありません」と言い出した</h3>
+    <p style="margin-bottom:0">自分の資料をもとに答えられるようにしたところ、料理や雑学のような関係ない質問にまで「資料には書かれていませんが…」と前置きするようになりました。
+      AIへの指示を日本語で書き直し、「関係ない質問には普通に答える」と決めて解決しました。</p>
+  </div>
+
+  <h2>いちばん大事なこと：AIに入れていい情報を決める</h2>
+  <p>最初は、社内のメモを丸ごとAIに読ませていました。すると、AIは聞かれるままに<strong>メモに書いてあったパスワードまで、伏せずに答えてしまいました</strong>。</p>
+  <p>AIは「誰に、何を答えていいか」を自分では判断できません。会話が外に出ないAIでも、読ませた情報は、使える人なら誰でも引き出せます。
+    結局、パスワードを含むメモはすべてAIから外し、今は予定表のように「見られても困らない情報」だけを読ませています。</p>
+  <div class="box">
+    <p style="margin:0"><strong>会社で入れるときのポイント</strong><br>
+      ・AIに読ませる資料は「その人が見てもいいもの」だけにする<br>
+      ・パスワード、個人情報、給与などは入れない<br>
+      ・使える人を社内の人に限る（インターネットに公開しない）</p>
+  </div>
+
+  <h2>こんな会社に向いています</h2>
+  <ul>
+    <li>お客さんの情報を扱うので、外部のAIサービスは使いにくい</li>
+    <li>社内の手順書やマニュアルをもとに答えてくれるAIがほしい</li>
+    <li>社員ごとにAIの月額料金を払うのは高い</li>
+  </ul>
+  <p>PC選びから、AIの頭の選定、社内だけで使える設定、「入れていい情報」の線引きまで、まとめてお手伝いできます。</p>
+
+  <p class="cta"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdPCOZxDOZvlKaMUaTIRZ9rGjRrdgUR9eAtF6QADRcpsjMWAw/viewform" target="_blank" rel="noopener">相談フォームを開く</a></p>
+</main>
+
+<footer><div class="wrap">© しくみ屋 ・ 岐阜県美濃加茂市周辺</div></footer>
+</body>
+</html>
