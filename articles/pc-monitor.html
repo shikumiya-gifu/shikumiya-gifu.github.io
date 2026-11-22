@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PCの温度と電気代を、スマホから見られるようにした | しくみ屋</title>
+<meta name="description" content="つけっぱなしのPCが熱くなっていないか、電気代はいくらかかっているかを、外出先からスマホで確認できる画面を作った記録です。">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="../">しくみ屋</a>
+  <nav><a href="../#service">できること</a><a href="../#articles">記事</a><a href="../#contact">相談</a></nav>
+</div></header>
+
+<main class="article">
+  <h1>PCの温度と電気代を、スマホから見られるようにした</h1>
+  <div class="meta">2026年11月 ・ 見える化</div>
+
+  <p>AIを動かしたり、ファイルを置いたりするために、PCを1日中つけっぱなしにしています。
+    そうなると気になるのが、「熱くなりすぎていないか」「電気代はいくらかかっているのか」です。</p>
+  <p>そこで、<strong>PCの状態と電気代を、外出先からスマホで確認できる画面</strong>を作りました。</p>
+
+  <h2>見られるもの</h2>
+  <ul>
+    <li><strong>温度</strong>：CPU（PCの頭脳）とグラフィックボードの温度</li>
+    <li><strong>負荷</strong>：今どれくらい働いているか、メモリをどれだけ使っているか</li>
+    <li><strong>電気代</strong>：今日と今月の電気代、そのうち「ふだんより余分にかかった分」</li>
+    <li><strong>推移</strong>：24時間・7日間のグラフ</li>
+    <li><strong>起動からの時間</strong>：勝手に再起動していないかの確認にも</li>
+  </ul>
+  <p>スマホのホーム画面にアイコンを置けるので、アプリのように開けます。画面は数秒ごとに自動で新しくなります。</p>
+
+  <h2>仕組み</h2>
+  <div class="flowline">
+    <span>PCが数秒ごとに自分の状態を測る</span><b>→</b><span>記録しておく</span><b>→</b><span>スマホから見に行く</span><b>→</b><span>グラフと数字で表示</span>
+  </div>
+  <p>測る係は、PCの電源が入ると自動で動き出します。誰もログインしていなくても記録が続くようにしてあります。
+    スマホからは、インターネットに公開せず、自分の端末どうしだけをつなぐ安全な経路で見に行きます。</p>
+
+  <h2>電気代をどう出しているか</h2>
+  <p>PCが使っている電力から、電気代を計算しています。ここが一番手間をかけたところです。</p>
+  <div class="box">
+    <ul style="margin:0">
+      <li><strong>単価は検針票から</strong>：電力会社の料金表ではなく、実際の検針票から「使う量が1kWh増えると、いくら増えるか」を出しました。基本料金や段階料金、燃料費の調整まで含めると、1kWhあたり約33円でした</li>
+      <li><strong>「ふだん」との差を出す</strong>：何もしていないときの電力をしばらく測っておき、それより多く使った分を「余分な電気代」として別に表示しています。重い作業をした日にいくら増えたかが分かります</li>
+      <li><strong>設定はあとから変えられる</strong>：電気料金が変わったら、数字を1か所直すだけで反映されます</li>
+    </ul>
+  </div>
+  <p>実際に測ってみると、AIを日常的に使っていても、ふだんより余分にかかった電気代は1日あたり数円ほどでした。「つけっぱなしは高そう」という不安が、数字で解消されました。</p>
+
+  <h2>つまずいたところ</h2>
+  <div class="box">
+    <h3 style="margin-top:0">CPUの温度が、普通の方法では取れない</h3>
+    <p style="margin-bottom:0">Windowsの標準機能では、CPUの温度や実際の消費電力が取れませんでした。
+      温度を読むための無料の部品を組み込み、PCの起動と同時に管理者の権限で動かすことで、正確な値が取れるようになりました。</p>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0">数日たつと、記録が勝手に止まる</h3>
+    <p style="margin-bottom:0">Windowsの「決まった時間に動かす」機能は、初期設定だと72時間で処理を止めてしまいます。つけっぱなし前提の仕組みでは致命的なので、時間制限をなくし、止まったら自動でやり直す設定にしました。</p>
+  </div>
+  <div class="box">
+    <h3 style="margin-top:0">SSDの温度は、製品によっては取れない</h3>
+    <p style="margin-bottom:0">記録用のSSD（保存装置）の温度も出したかったのですが、搭載している製品がそもそも温度を出さない仕様でした。
+      画面には「この製品は温度未対応」と表示して、無理に変な数字を出さないようにしています。</p>
+  </div>
+
+  <h2>お仕事にどう活きるか</h2>
+  <p>同じ考え方で、こんなものを「見える化」できます。</p>
+  <ul>
+    <li>事務所のサーバーやNAS（共有ファイル置き場）が元気に動いているか</li>
+    <li>店舗の冷蔵庫・倉庫の温度（センサーを付けて）</li>
+    <li>機械の稼働時間や電気代</li>
+  </ul>
+  <p>異常があったときにLINEでお知らせする仕組みと組み合わせることもできます。「気になっているけど、わざわざ見に行くのは面倒」なものがあれば、相談してください。</p>
+
+  <p class="cta"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdPCOZxDOZvlKaMUaTIRZ9rGjRrdgUR9eAtF6QADRcpsjMWAw/viewform" target="_blank" rel="noopener">相談フォームを開く</a></p>
+</main>
+
+<footer><div class="wrap">© しくみ屋 ・ 岐阜県美濃加茂市周辺</div></footer>
+</body>
+</html>
