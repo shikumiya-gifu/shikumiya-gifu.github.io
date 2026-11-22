@@ -5,54 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>しくみ屋 | 小さな会社・お店の「めんどう」を仕組みにします</title>
 <meta name="description" content="岐阜・美濃加茂周辺で、小さな会社やお店の業務自動化・スマホアプリ・社内IT・ローカルAI導入をお手伝いしています。">
-<style>
-:root{
-  --bg:#fbfaf7; --fg:#1f2328; --muted:#5b6470; --card:#ffffff; --line:#e6e2da;
-  --accent:#1f7a6d; --accent-soft:#e3f2ef;
-}
-@media (prefers-color-scheme: dark){
-  :root{ --bg:#15181c; --fg:#e8eaed; --muted:#9aa3ad; --card:#1d2126; --line:#2c3238;
-         --accent:#5cc2b0; --accent-soft:#1c3330; }
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);
-  font-family:"Hiragino Sans","Noto Sans JP","Yu Gothic UI",Meiryo,sans-serif;line-height:1.8}
-a{color:var(--accent)}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-header{border-bottom:1px solid var(--line)}
-header .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
-.logo{font-weight:700;font-size:1.2rem;letter-spacing:.05em;text-decoration:none;color:var(--fg)}
-nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-size:.95rem}
-nav a:hover{color:var(--accent)}
-.hero{padding:72px 0 56px}
-.hero h1{font-size:clamp(1.6rem,4.5vw,2.4rem);line-height:1.45;margin:0 0 18px}
-.hero p{color:var(--muted);max-width:640px;margin:0 0 28px}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 24px;border-radius:8px;
-  text-decoration:none;font-weight:600}
-@media (prefers-color-scheme: dark){ .btn{color:#10201d} }
-section{padding:48px 0;border-top:1px solid var(--line)}
-h2{font-size:1.4rem;margin:0 0 8px}
-.lead{color:var(--muted);margin:0 0 28px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
-.card h3{margin:0 0 6px;font-size:1.05rem}
-.card p{margin:0;color:var(--muted);font-size:.95rem}
-.tag{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:.78rem;
-  padding:2px 10px;border-radius:99px;margin-bottom:10px}
-table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-td,th{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left;font-size:.95rem}
-th{width:42%;font-weight:600}
-tr:last-child td,tr:last-child th{border-bottom:none}
-.note{color:var(--muted);font-size:.85rem;margin-top:10px}
-ol.flow{padding-left:1.2em} ol.flow li{margin-bottom:6px}
-footer{padding:28px 0;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
-@media (max-width:560px){ nav a{margin-left:12px;font-size:.85rem} .hero{padding:48px 0 40px} }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header><div class="wrap">
   <a class="logo" href="#">しくみ屋</a>
-  <nav><a href="#service">できること</a><a href="#works">作ったもの</a><a href="#price">料金</a><a href="#contact">相談</a></nav>
+  <nav><a href="#service">できること</a><a href="#works">作ったもの</a><a href="#articles">記事</a><a href="#price">料金</a><a href="#contact">相談</a></nav>
 </div></header>
 
 <main class="wrap">
@@ -91,6 +49,16 @@ footer{padding:28px 0;color:var(--muted);font-size:.85rem;border-top:1px solid v
         <p>卓上ロボット「スタックちゃん」に自宅PCのAIを入れ、顔の見分け・会話の記憶・タイマーなどを実装。</p></div>
       <div class="card"><span class="tag">見える化</span><h3>PCの状態モニター</h3>
         <p>PCの温度・負荷・電気代をスマホから確認できる画面。機器の異常に早く気づけます。</p></div>
+    </div>
+  </section>
+
+  <section id="articles">
+    <h2>記事</h2>
+    <p class="lead">作ったものの記録です。</p>
+    <div class="grid list">
+      <a class="card" href="articles/stackchan-local-ai.html"><span class="tag">AI / ロボット</span>
+        <h3>卓上ロボット「スタックちゃん」に、自宅PCのAIを入れてみた</h3>
+        <p>クラウドに頼らず、自宅PCのAIでしゃべるロボット。顔の見分け、会話の記憶、ハマったところまで。</p></a>
     </div>
   </section>
 
