@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>しくみ屋 | 小さな会社・お店の「めんどう」を仕組みにします</title>
+<meta name="description" content="岐阜・美濃加茂周辺で、小さな会社やお店の業務自動化・スマホアプリ・社内IT・ローカルAI導入をお手伝いしています。">
+<style>
+:root{
+  --bg:#fbfaf7; --fg:#1f2328; --muted:#5b6470; --card:#ffffff; --line:#e6e2da;
+  --accent:#1f7a6d; --accent-soft:#e3f2ef;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#15181c; --fg:#e8eaed; --muted:#9aa3ad; --card:#1d2126; --line:#2c3238;
+         --accent:#5cc2b0; --accent-soft:#1c3330; }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:"Hiragino Sans","Noto Sans JP","Yu Gothic UI",Meiryo,sans-serif;line-height:1.8}
+a{color:var(--accent)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-weight:700;font-size:1.2rem;letter-spacing:.05em;text-decoration:none;color:var(--fg)}
+nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-size:.95rem}
+nav a:hover{color:var(--accent)}
+.hero{padding:72px 0 56px}
+.hero h1{font-size:clamp(1.6rem,4.5vw,2.4rem);line-height:1.45;margin:0 0 18px}
+.hero p{color:var(--muted);max-width:640px;margin:0 0 28px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 24px;border-radius:8px;
+  text-decoration:none;font-weight:600}
+@media (prefers-color-scheme: dark){ .btn{color:#10201d} }
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font-size:1.4rem;margin:0 0 8px}
+.lead{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px}
+.card h3{margin:0 0 6px;font-size:1.05rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.tag{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:.78rem;
+  padding:2px 10px;border-radius:99px;margin-bottom:10px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+td,th{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left;font-size:.95rem}
+th{width:42%;font-weight:600}
+tr:last-child td,tr:last-child th{border-bottom:none}
+.note{color:var(--muted);font-size:.85rem;margin-top:10px}
+ol.flow{padding-left:1.2em} ol.flow li{margin-bottom:6px}
+footer{padding:28px 0;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+@media (max-width:560px){ nav a{margin-left:12px;font-size:.85rem} .hero{padding:48px 0 40px} }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#">しくみ屋</a>
+  <nav><a href="#service">できること</a><a href="#works">作ったもの</a><a href="#price">料金</a><a href="#contact">相談</a></nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>小さな会社・お店の<br>「毎回の手間」を、仕組みにします。</h1>
+    <p>岐阜・美濃加茂周辺で、本業のかたわら社内ITと業務の自動化をしています。
+      「お客さんへの連絡が手作業」「同じ入力を何度もしている」「PCやネットのことを聞ける人がいない」――
+      そんな困りごとを、LINE・スマホ・小さなコンピューターを組み合わせて解決します。</p>
+    <a class="btn" href="#contact">まずは相談する（無料）</a>
+  </div>
+
+  <section id="service">
+    <h2>できること</h2>
+    <p class="lead">大きなシステムではなく、現場ですぐ使える小さな仕組みが得意です。</p>
+    <div class="grid">
+      <div class="card"><span class="tag">自動化</span><h3>お知らせ・連絡の自動化</h3>
+        <p>点検時期・予約前日・期限切れなどのお知らせを、LINEで自動送信。手作業の連絡漏れをなくします。</p></div>
+      <div class="card"><span class="tag">アプリ</span><h3>業務用スマホアプリ</h3>
+        <p>顧客検索、記録、在庫チェックなど、自社専用のAndroidアプリを作ります。</p></div>
+      <div class="card"><span class="tag">社内IT</span><h3>PC・ネットワークの相談</h3>
+        <p>PCの入れ替え、Wi-Fi、ウイルス対策、メール設定など。「詳しい人がいない」会社の相談役になります。</p></div>
+      <div class="card"><span class="tag">AI</span><h3>社外に出さないAIの導入</h3>
+        <p>データを外部に送らず、社内のPCだけで動くAIチャットを導入。情報を外に出したくない業種にも。</p></div>
+    </div>
+  </section>
+
+  <section id="works">
+    <h2>作ったもの</h2>
+    <p class="lead">実際に作って、毎日使っているものの一部です。</p>
+    <div class="grid">
+      <div class="card"><span class="tag">自動化</span><h3>点検時期のLINE自動通知</h3>
+        <p>顧客ごとの前回日と周期から時期を計算し、LINEでお知らせ。人が覚えておく必要がなくなりました。</p></div>
+      <div class="card"><span class="tag">アプリ</span><h3>顧客検索アプリ</h3>
+        <p>業務システムの顧客情報を、外出先からスマホでさっと検索できるようにしました。</p></div>
+      <div class="card"><span class="tag">AI</span><h3>しゃべるロボット × 自前AI</h3>
+        <p>卓上ロボット「スタックちゃん」に自宅PCのAIを入れ、顔の見分け・会話の記憶・タイマーなどを実装。</p></div>
+      <div class="card"><span class="tag">見える化</span><h3>PCの状態モニター</h3>
+        <p>PCの温度・負荷・電気代をスマホから確認できる画面。機器の異常に早く気づけます。</p></div>
+    </div>
+  </section>
+
+  <section id="price">
+    <h2>料金の目安</h2>
+    <p class="lead">内容をうかがってから、作る前にお見積りします。</p>
+    <table>
+      <tr><th>ご相談・お見積り</th><td>無料</td></tr>
+      <tr><th>PC・ネットワークの困りごと対応</th><td>1回 5,000円〜</td></tr>
+      <tr><th>小さな自動化（お知らせ送信など）</th><td>30,000円〜</td></tr>
+      <tr><th>業務用スマホアプリ</th><td>80,000円〜</td></tr>
+      <tr><th>保守・見守り（任意）</th><td>月 3,000円〜</td></tr>
+    </table>
+    <p class="note">※ 本業があるため、対応は平日夜・休日が中心です。</p>
+  </section>
+
+  <section id="contact">
+    <h2>相談する</h2>
+    <p class="lead">「こんなことできる？」の段階で大丈夫です。</p>
+    <ol class="flow">
+      <li>下のフォームから、困っていることを書いて送信</li>
+      <li>こちらから返信し、必要ならお話をうかがいます</li>
+      <li>お見積り → 納得いただけたら作成開始</li>
+    </ol>
+    <p><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdPCOZxDOZvlKaMUaTIRZ9rGjRrdgUR9eAtF6QADRcpsjMWAw/viewform" target="_blank" rel="noopener" id="form-link">相談フォームを開く</a></p>
+  </section>
+</main>
+
+<footer><div class="wrap">© しくみ屋 ・ 岐阜県美濃加茂市周辺</div></footer>
+</body>
+</html>
